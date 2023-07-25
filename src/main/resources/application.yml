@@ -1,0 +1,18 @@
+server:
+  port: 12316
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/linktree
+    password: 1234
+    username: nikslav
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+
+  security:
+    sign-key: DHSFHDSKLFHKDSHFKLSDJKA,MA222-!FSD!SA2
+  main:
+    allow-bean-definition-overriding: true
+linknest:
+  max-count: 5
