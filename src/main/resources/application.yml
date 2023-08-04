@@ -3,15 +3,15 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5435/linktree
-    password: 1234
-    username: nikslav
+    password: ${LINKNEST_DB_PASSWORD}
+    username: ${LINKNEST_DB_USERNAME}
   jpa:
     database: postgresql
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
 
   security:
-    sign-key: DHSFHDSKLFHKDSHFKLSDJKA,MA222-!FSD!SA2
+    sign-key: ${LINKNEST_SIGNING_KEY}
   main:
     allow-bean-definition-overriding: true
 linknest:
